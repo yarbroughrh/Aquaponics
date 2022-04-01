@@ -2,18 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/brown"
     tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/login_center"
+        android:id="@+id/sign_up_center"
         android:layout_width="347dp"
         android:layout_height="293dp"
-        android:background="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,14 +22,15 @@
         app:layout_constraintVertical_bias="0.582">
 
         <EditText
-            android:id="@+id/login_Username"
+            android:id="@+id/login_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="80dp"
             android:ems="10"
             android:hint="Username"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,21 +38,36 @@
             android:id="@+id/login_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="24dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_Username" />
+            app:layout_constraintTop_toBottomOf="@+id/login_username" />
 
         <Button
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="224dp"
+            android:layout_marginStart="240dp"
             android:layout_marginTop="28dp"
             android:text="Login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_password" />
+
+        <TextView
+            android:id="@+id/login_sign_up_link"
+            android:layout_width="195dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/orange_burnt"
+            android:onClick="startSignUp"
+            android:text="Don't have an account? Sign Up!"
+            app:layout_constraintEnd_toStartOf="@+id/login_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_password" />
     </androidx.constraintlayout.widget.ConstraintLayout>
